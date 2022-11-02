@@ -9,7 +9,7 @@ https://raw.githubusercontent.com/IBM/MAX-Object-Detector/master/max-object-dete
 How to create and deploy one service.
 $ ibmcloud ks cluster config --cluster <clusterID>
 How to copy from online repo
-curl https://raw.githubusercontent.com/IBM/MAX-Object-Detector/master/max-object-detector.yaml > max-object-detector.yaml
+curl <Online file> > max-object-detector.yaml
 $ kubectl apply -f max-object-detector.yaml
 $ ibmcloud cs workers --cluster cd96ri1f05600fl9tdng
 $ kubectl get pods
@@ -17,7 +17,7 @@ $ ibmcloud cs workers --cluster cd96ri1f05600fl9tdng
 $ kubectl describe service max-object-detector | grep NodePort
 ===================================================
 My Linux machine- 
-Folder- /home/owner/IBM/cloud/IBM-Cloud-Lab/kubernetes/services-deployments
+Folder- /home/owner/kubernetes/services-deployments
 kubectl apply -f maxobject-detector.yaml  myapp.yaml
 Result-
 http://159.122.183.222:30004/
@@ -28,5 +28,5 @@ NAME                  TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        
 kubernetes            ClusterIP   172.21.0.1       <none>        443/TCP          145m
 max-object-detector   NodePort    172.21.108.244   <none>        5000:30005/TCP   17m
 myapp-service         NodePort    172.21.14.193    <none>        80:30004/TCP     18m
-owner@owner-Vostro-3583:~/IBM/cloud/IBM-Cloud-Lab/kubernetes/services-deployments$ curl http://172.21.108.244:5000/app/
-owner@owner-Vostro-3583:~/IBM/cloud/IBM-Cloud-Lab/kubernetes/services-deployments$ curl http://172.21.14.193:80/app/
+$ curl http://172.21.108.244:5000/app/
+$ curl http://172.21.14.193:80/app/
